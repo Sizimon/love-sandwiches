@@ -1,4 +1,3 @@
-from pprint import pprint
 import gspread
 from google.oauth2.service_account import Credentials
 
@@ -25,7 +24,7 @@ def get_sales_data():
         print('Data should be six numbers, seperated by commas.')
         print('Example: 10, 20, 30, 40, 50, 60\n')
 
-        data_str = input('Enter your data here: ')
+        data_str = input('Enter your data here:\n')
         print(f'The data provided is {data_str}')
 
         sales_data = data_str.split(',')
@@ -128,7 +127,7 @@ def main():
     update_worksheet(new_surplus_data, 'surplus')
     sales_columns = get_last_5_entries_sales()
     stock_data = calculate_stock_data(sales_columns)
-    update_worksheet(stock_data, 'stock')
+    update_worksheet(stock_data, 'stock ')
  
 
 print('Welcome to Love Sandwiches Data Automation')
